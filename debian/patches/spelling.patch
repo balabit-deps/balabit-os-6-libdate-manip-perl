@@ -1,0 +1,1030 @@
+Description: spelling fix
+ s/occurence/occurrence/g
+Origin: vendor
+Author: gregor herrmann <gregoa@debian.org>
+Last-Update: 2015-12-02
+Forwarded: https://rt.cpan.org/Ticket/Display.html?id=110025
+Bug: https://rt.cpan.org/Ticket/Display.html?id=110025
+
+--- a/internal/langpod
++++ b/internal/langpod
+@@ -293,7 +293,7 @@
+ 
+ ${e}item B<Each or every>
+ 
+-There are a list of words that specify every occurence of something.  These
++There are a list of words that specify every occurrence of something.  These
+ are used in the following phrases:
+ 
+    EACH Monday
+@@ -304,10 +304,10 @@
+ 
+ $words{each}
+ 
+-${e}item B<Next/Previous/Last occurence>
++${e}item B<Next/Previous/Last occurrence>
+ 
+ There are a list of words that may be used to specify the next,
+-previous, or last occurence of something.  These words could be used
++previous, or last occurrence of something.  These words could be used
+ in the following phrases:
+ 
+    NEXT week
+@@ -319,15 +319,15 @@
+ 
+ The following words may be used:
+ 
+-Next occurence:
++Next occurrence:
+ 
+ $words{nextprev}[0]
+ 
+-Previous occurence:
++Previous occurrence:
+ 
+ $words{nextprev}[1]
+ 
+-Last occurence:
++Last occurrence:
+ 
+ $words{last}
+ 
+--- a/lib/Date/Manip/Changes5.pod
++++ b/lib/Date/Manip/Changes5.pod
+@@ -355,9 +355,9 @@
+ week in the week, month, or year. It is now possible to look at the
+ 3rd Friday of every month for example.
+ 
+-Y-0-WOY-DOW now refers to the WOY'th occurence of DOW instead of the
++Y-0-WOY-DOW now refers to the WOY'th occurrence of DOW instead of the
+ ISO 8601 date Y-W(WOY)-DOY. Also, changed Y-0-WOY-0 to refer to the
+-WOY'th occurence of FirstDay, and got rid of the MW and MD flags. Many
++WOY'th occurrence of FirstDay, and got rid of the MW and MD flags. Many
+ other similar changes.
+ 
+ =item B<(!) Changed %x format in UnixDate>
+@@ -1057,7 +1057,7 @@
+ 
+ Fixed a bug in ParseDateDelta.  Antonio Rosella.
+ 
+-Removed the only occurence of $& (which may speed some things up).  Fix
++Removed the only occurrence of $& (which may speed some things up).  Fix
+ by Ken Williams.  First suggested by Abigail.
+ 
+ Fixed an overflow bug in doing date calculations with 2 dates more than
+@@ -1503,7 +1503,7 @@
+ 
+ Added options to delete existing holidays and ignore global config file.
+ 
+-Date_GetNext and Date_GetPrev now return the next/prev occurence of a
++Date_GetNext and Date_GetPrev now return the next/prev occurrence of a
+ time as well as a day.  Suggested by Are Bryne.
+ 
+ In approximate mode, deltas now come out completely normalized (only 1
+--- a/lib/Date/Manip/Changes5to6.pod
++++ b/lib/Date/Manip/Changes5to6.pod
+@@ -609,9 +609,9 @@
+ 
+    1*2:3:4:0:0:0
+ 
+-referred to the 3rd occurence of the 4th day of the week in February.
++referred to the 3rd occurrence of the 4th day of the week in February.
+ 
+-The meaning has been changed to refer to the 3rd occurence of day 4
++The meaning has been changed to refer to the 3rd occurrence of day 4
+ (Thursday) in February. This is a much more useful type of recurrence.
+ 
+ As a result of this change, the related recurrence:
+--- a/lib/Date/Manip/DM5.pm
++++ b/lib/Date/Manip/DM5.pm
+@@ -4472,7 +4472,7 @@
+     $date1=_DateCalc_DateDelta($date0,"+0:1:0:0:0:0:0");
+ 
+     foreach $d (@d) {
+-      # Find 1st occurence of DOW (in both months)
++      # Find 1st occurrence of DOW (in both months)
+       $d0=Date_GetNext($date0,$d,1);
+       $d1=Date_GetNext($date1,$d,1);
+ 
+--- a/lib/Date/Manip/Date.pod
++++ b/lib/Date/Manip/Date.pod
+@@ -498,13 +498,13 @@
+ 
+    $err = $date->prev($dow, $curr [,$time]);
+ 
+-If $curr = 0, this means to look for the previous occurence of the day
++If $curr = 0, this means to look for the previous occurrence of the day
+ of week, and set the time to the value passed in (or current time if
+ no time was passed in). The day is ALWAY less than the current day. If
+ the current day is the same day of week as $dow, then the date
+ returned will be one week earlier.
+ 
+-If $curr = 1, it means to look for the current or previous occurence
++If $curr = 1, it means to look for the current or previous occurrence
+ of the day of week, and set the time to the value passed in (or 00:00:00 if
+ none was passed in). If the current day of week is the same as $dow, the
+ date will remain unchanged. Since the time is then set, the new date may
+@@ -1161,7 +1161,7 @@
+         1970 1st Dec
+ 
+    next/prev DoW
+-        The next or last occurence of DoW
++        The next or last occurrence of DoW
+            next Friday
+            last Friday at 12:40
+ 
+--- a/lib/Date/Manip/Holidays.pod
++++ b/lib/Date/Manip/Holidays.pod
+@@ -59,11 +59,11 @@
+ 
+    2004-12-31                      = New Year's Day
+ 
+-then it would assume that it had found the occurence of New Year's for
+-2004 when in fact, this is the 2005 occurence.
++then it would assume that it had found the occurrence of New Year's for
++2004 when in fact, this is the 2005 occurrence.
+ 
+ Full date specifications should only be used as a last resort, and
+-probably only if you will explicitly specify all occurences of the
++probably only if you will explicitly specify all occurrences of the
+ holiday.
+ 
+ =item B<A date without a year>
+--- a/lib/Date/Manip/Lang/catalan.pod
++++ b/lib/Date/Manip/Lang/catalan.pod
+@@ -252,7 +252,7 @@
+ 
+ =item B<Each or every>
+ 
+-There are a list of words that specify every occurence of something.  These
++There are a list of words that specify every occurrence of something.  These
+ are used in the following phrases:
+ 
+    EACH Monday
+@@ -266,10 +266,10 @@
+    cadascun
+ 
+ 
+-=item B<Next/Previous/Last occurence>
++=item B<Next/Previous/Last occurrence>
+ 
+ There are a list of words that may be used to specify the next,
+-previous, or last occurence of something.  These words could be used
++previous, or last occurrence of something.  These words could be used
+ in the following phrases:
+ 
+    NEXT week
+@@ -281,21 +281,21 @@
+ 
+ The following words may be used:
+ 
+-Next occurence:
++Next occurrence:
+ 
+    proper
+    seguent
+    següent
+ 
+ 
+-Previous occurence:
++Previous occurrence:
+ 
+    passat
+    proppassat
+    anterior
+ 
+ 
+-Last occurence:
++Last occurrence:
+ 
+    darrer
+    darrera
+--- a/lib/Date/Manip/Lang/danish.pod
++++ b/lib/Date/Manip/Lang/danish.pod
+@@ -206,7 +206,7 @@
+ 
+ =item B<Each or every>
+ 
+-There are a list of words that specify every occurence of something.  These
++There are a list of words that specify every occurrence of something.  These
+ are used in the following phrases:
+ 
+    EACH Monday
+@@ -218,10 +218,10 @@
+    hver
+ 
+ 
+-=item B<Next/Previous/Last occurence>
++=item B<Next/Previous/Last occurrence>
+ 
+ There are a list of words that may be used to specify the next,
+-previous, or last occurence of something.  These words could be used
++previous, or last occurrence of something.  These words could be used
+ in the following phrases:
+ 
+    NEXT week
+@@ -233,18 +233,18 @@
+ 
+ The following words may be used:
+ 
+-Next occurence:
++Next occurrence:
+ 
+    naste
+    næste
+ 
+ 
+-Previous occurence:
++Previous occurrence:
+ 
+    forrige
+ 
+ 
+-Last occurence:
++Last occurrence:
+ 
+    forrige
+    sidste
+--- a/lib/Date/Manip/Lang/dutch.pod
++++ b/lib/Date/Manip/Lang/dutch.pod
+@@ -219,7 +219,7 @@
+ 
+ =item B<Each or every>
+ 
+-There are a list of words that specify every occurence of something.  These
++There are a list of words that specify every occurrence of something.  These
+ are used in the following phrases:
+ 
+    EACH Monday
+@@ -232,10 +232,10 @@
+    elk
+ 
+ 
+-=item B<Next/Previous/Last occurence>
++=item B<Next/Previous/Last occurrence>
+ 
+ There are a list of words that may be used to specify the next,
+-previous, or last occurence of something.  These words could be used
++previous, or last occurrence of something.  These words could be used
+ in the following phrases:
+ 
+    NEXT week
+@@ -247,20 +247,20 @@
+ 
+ The following words may be used:
+ 
+-Next occurence:
++Next occurrence:
+ 
+    volgende
+    volgend
+ 
+ 
+-Previous occurence:
++Previous occurrence:
+ 
+    voorgaande
+    voorgaand
+    vorige
+ 
+ 
+-Last occurence:
++Last occurrence:
+ 
+    laatste
+    afgelopen
+--- a/lib/Date/Manip/Lang/english.pod
++++ b/lib/Date/Manip/Lang/english.pod
+@@ -234,7 +234,7 @@
+ 
+ =item B<Each or every>
+ 
+-There are a list of words that specify every occurence of something.  These
++There are a list of words that specify every occurrence of something.  These
+ are used in the following phrases:
+ 
+    EACH Monday
+@@ -247,10 +247,10 @@
+    every
+ 
+ 
+-=item B<Next/Previous/Last occurence>
++=item B<Next/Previous/Last occurrence>
+ 
+ There are a list of words that may be used to specify the next,
+-previous, or last occurence of something.  These words could be used
++previous, or last occurrence of something.  These words could be used
+ in the following phrases:
+ 
+    NEXT week
+@@ -262,19 +262,19 @@
+ 
+ The following words may be used:
+ 
+-Next occurence:
++Next occurrence:
+ 
+    next
+    following
+ 
+ 
+-Previous occurence:
++Previous occurrence:
+ 
+    previous
+    last
+ 
+ 
+-Last occurence:
++Last occurrence:
+ 
+    last
+    final
+--- a/lib/Date/Manip/Lang/finnish.pod
++++ b/lib/Date/Manip/Lang/finnish.pod
+@@ -240,7 +240,7 @@
+ 
+ =item B<Each or every>
+ 
+-There are a list of words that specify every occurence of something.  These
++There are a list of words that specify every occurrence of something.  These
+ are used in the following phrases:
+ 
+    EACH Monday
+@@ -253,10 +253,10 @@
+    jokainen
+ 
+ 
+-=item B<Next/Previous/Last occurence>
++=item B<Next/Previous/Last occurrence>
+ 
+ There are a list of words that may be used to specify the next,
+-previous, or last occurence of something.  These words could be used
++previous, or last occurrence of something.  These words could be used
+ in the following phrases:
+ 
+    NEXT week
+@@ -268,17 +268,17 @@
+ 
+ The following words may be used:
+ 
+-Next occurence:
++Next occurrence:
+ 
+    ensi
+ 
+ 
+-Previous occurence:
++Previous occurrence:
+ 
+    viime
+ 
+ 
+-Last occurence:
++Last occurrence:
+ 
+    viimeinen
+ 
+--- a/lib/Date/Manip/Lang/french.pod
++++ b/lib/Date/Manip/Lang/french.pod
+@@ -229,7 +229,7 @@
+ 
+ =item B<Each or every>
+ 
+-There are a list of words that specify every occurence of something.  These
++There are a list of words that specify every occurrence of something.  These
+ are used in the following phrases:
+ 
+    EACH Monday
+@@ -243,10 +243,10 @@
+    toutes les
+ 
+ 
+-=item B<Next/Previous/Last occurence>
++=item B<Next/Previous/Last occurrence>
+ 
+ There are a list of words that may be used to specify the next,
+-previous, or last occurence of something.  These words could be used
++previous, or last occurrence of something.  These words could be used
+ in the following phrases:
+ 
+    NEXT week
+@@ -258,7 +258,7 @@
+ 
+ The following words may be used:
+ 
+-Next occurence:
++Next occurrence:
+ 
+    suivant
+    suivante
+@@ -266,7 +266,7 @@
+    prochaine
+ 
+ 
+-Previous occurence:
++Previous occurrence:
+ 
+    precedent
+    précédent
+@@ -276,7 +276,7 @@
+    dernière
+ 
+ 
+-Last occurence:
++Last occurrence:
+ 
+    dernier
+ 
+--- a/lib/Date/Manip/Lang/german.pod
++++ b/lib/Date/Manip/Lang/german.pod
+@@ -215,7 +215,7 @@
+ 
+ =item B<Each or every>
+ 
+-There are a list of words that specify every occurence of something.  These
++There are a list of words that specify every occurrence of something.  These
+ are used in the following phrases:
+ 
+    EACH Monday
+@@ -227,10 +227,10 @@
+    jeden
+ 
+ 
+-=item B<Next/Previous/Last occurence>
++=item B<Next/Previous/Last occurrence>
+ 
+ There are a list of words that may be used to specify the next,
+-previous, or last occurence of something.  These words could be used
++previous, or last occurrence of something.  These words could be used
+ in the following phrases:
+ 
+    NEXT week
+@@ -242,7 +242,7 @@
+ 
+ The following words may be used:
+ 
+-Next occurence:
++Next occurrence:
+ 
+    nachsten
+    nächsten
+@@ -250,7 +250,7 @@
+    nächste
+ 
+ 
+-Previous occurence:
++Previous occurrence:
+ 
+    vorherigen
+    vorherige
+@@ -258,7 +258,7 @@
+    letzten
+ 
+ 
+-Last occurence:
++Last occurrence:
+ 
+    letzten
+    letzte
+--- a/lib/Date/Manip/Lang/italian.pod
++++ b/lib/Date/Manip/Lang/italian.pod
+@@ -204,7 +204,7 @@
+ 
+ =item B<Each or every>
+ 
+-There are a list of words that specify every occurence of something.  These
++There are a list of words that specify every occurrence of something.  These
+ are used in the following phrases:
+ 
+    EACH Monday
+@@ -216,10 +216,10 @@
+    ogni
+ 
+ 
+-=item B<Next/Previous/Last occurence>
++=item B<Next/Previous/Last occurrence>
+ 
+ There are a list of words that may be used to specify the next,
+-previous, or last occurence of something.  These words could be used
++previous, or last occurrence of something.  These words could be used
+ in the following phrases:
+ 
+    NEXT week
+@@ -231,17 +231,17 @@
+ 
+ The following words may be used:
+ 
+-Next occurence:
++Next occurrence:
+ 
+    prossimo
+ 
+ 
+-Previous occurence:
++Previous occurrence:
+ 
+    ultimo
+ 
+ 
+-Last occurence:
++Last occurrence:
+ 
+    ultimo
+ 
+--- a/lib/Date/Manip/Lang/norwegian.pod
++++ b/lib/Date/Manip/Lang/norwegian.pod
+@@ -207,7 +207,7 @@
+ 
+ =item B<Each or every>
+ 
+-There are a list of words that specify every occurence of something.  These
++There are a list of words that specify every occurrence of something.  These
+ are used in the following phrases:
+ 
+    EACH Monday
+@@ -219,10 +219,10 @@
+    hver
+ 
+ 
+-=item B<Next/Previous/Last occurence>
++=item B<Next/Previous/Last occurrence>
+ 
+ There are a list of words that may be used to specify the next,
+-previous, or last occurence of something.  These words could be used
++previous, or last occurrence of something.  These words could be used
+ in the following phrases:
+ 
+    NEXT week
+@@ -234,17 +234,17 @@
+ 
+ The following words may be used:
+ 
+-Next occurence:
++Next occurrence:
+ 
+    neste
+ 
+ 
+-Previous occurence:
++Previous occurrence:
+ 
+    forrige
+ 
+ 
+-Last occurence:
++Last occurrence:
+ 
+    siste
+ 
+--- a/lib/Date/Manip/Lang/polish.pod
++++ b/lib/Date/Manip/Lang/polish.pod
+@@ -239,7 +239,7 @@
+ 
+ =item B<Each or every>
+ 
+-There are a list of words that specify every occurence of something.  These
++There are a list of words that specify every occurrence of something.  These
+ are used in the following phrases:
+ 
+    EACH Monday
+@@ -254,10 +254,10 @@
+    każdym
+ 
+ 
+-=item B<Next/Previous/Last occurence>
++=item B<Next/Previous/Last occurrence>
+ 
+ There are a list of words that may be used to specify the next,
+-previous, or last occurence of something.  These words could be used
++previous, or last occurrence of something.  These words could be used
+ in the following phrases:
+ 
+    NEXT week
+@@ -269,7 +269,7 @@
+ 
+ The following words may be used:
+ 
+-Next occurence:
++Next occurrence:
+ 
+    nastepny
+    następny
+@@ -281,7 +281,7 @@
+    przyszłym
+ 
+ 
+-Previous occurence:
++Previous occurrence:
+ 
+    zeszly
+    zeszły
+@@ -289,7 +289,7 @@
+    zeszłym
+ 
+ 
+-Last occurence:
++Last occurrence:
+ 
+    ostatni
+    ostatna
+--- a/lib/Date/Manip/Lang/portugue.pod
++++ b/lib/Date/Manip/Lang/portugue.pod
+@@ -215,7 +215,7 @@
+ 
+ =item B<Each or every>
+ 
+-There are a list of words that specify every occurence of something.  These
++There are a list of words that specify every occurrence of something.  These
+ are used in the following phrases:
+ 
+    EACH Monday
+@@ -227,10 +227,10 @@
+    cada
+ 
+ 
+-=item B<Next/Previous/Last occurence>
++=item B<Next/Previous/Last occurrence>
+ 
+ There are a list of words that may be used to specify the next,
+-previous, or last occurence of something.  These words could be used
++previous, or last occurrence of something.  These words could be used
+ in the following phrases:
+ 
+    NEXT week
+@@ -242,7 +242,7 @@
+ 
+ The following words may be used:
+ 
+-Next occurence:
++Next occurrence:
+ 
+    proxima
+    próxima
+@@ -250,7 +250,7 @@
+    próximo
+ 
+ 
+-Previous occurence:
++Previous occurrence:
+ 
+    ultima
+    última
+@@ -258,7 +258,7 @@
+    último
+ 
+ 
+-Last occurence:
++Last occurrence:
+ 
+    ultimo
+    último
+--- a/lib/Date/Manip/Lang/romanian.pod
++++ b/lib/Date/Manip/Lang/romanian.pod
+@@ -208,7 +208,7 @@
+ 
+ =item B<Each or every>
+ 
+-There are a list of words that specify every occurence of something.  These
++There are a list of words that specify every occurrence of something.  These
+ are used in the following phrases:
+ 
+    EACH Monday
+@@ -220,10 +220,10 @@
+    fiecare
+ 
+ 
+-=item B<Next/Previous/Last occurence>
++=item B<Next/Previous/Last occurrence>
+ 
+ There are a list of words that may be used to specify the next,
+-previous, or last occurence of something.  These words could be used
++previous, or last occurrence of something.  These words could be used
+ in the following phrases:
+ 
+    NEXT week
+@@ -235,19 +235,19 @@
+ 
+ The following words may be used:
+ 
+-Next occurence:
++Next occurrence:
+ 
+    urmatoarea
+    următoarea
+ 
+ 
+-Previous occurence:
++Previous occurrence:
+ 
+    precedenta
+    ultima
+ 
+ 
+-Last occurence:
++Last occurrence:
+ 
+    ultima
+ 
+--- a/lib/Date/Manip/Lang/russian.pod
++++ b/lib/Date/Manip/Lang/russian.pod
+@@ -262,7 +262,7 @@
+ 
+ =item B<Each or every>
+ 
+-There are a list of words that specify every occurence of something.  These
++There are a list of words that specify every occurrence of something.  These
+ are used in the following phrases:
+ 
+    EACH Monday
+@@ -274,10 +274,10 @@
+    каждый
+ 
+ 
+-=item B<Next/Previous/Last occurence>
++=item B<Next/Previous/Last occurrence>
+ 
+ There are a list of words that may be used to specify the next,
+-previous, or last occurence of something.  These words could be used
++previous, or last occurrence of something.  These words could be used
+ in the following phrases:
+ 
+    NEXT week
+@@ -289,17 +289,17 @@
+ 
+ The following words may be used:
+ 
+-Next occurence:
++Next occurrence:
+ 
+    следующий
+ 
+ 
+-Previous occurence:
++Previous occurrence:
+ 
+    предыдущий
+ 
+ 
+-Last occurence:
++Last occurrence:
+ 
+    последний
+ 
+--- a/lib/Date/Manip/Lang/spanish.pod
++++ b/lib/Date/Manip/Lang/spanish.pod
+@@ -209,7 +209,7 @@
+ 
+ =item B<Each or every>
+ 
+-There are a list of words that specify every occurence of something.  These
++There are a list of words that specify every occurrence of something.  These
+ are used in the following phrases:
+ 
+    EACH Monday
+@@ -221,10 +221,10 @@
+    cada
+ 
+ 
+-=item B<Next/Previous/Last occurence>
++=item B<Next/Previous/Last occurrence>
+ 
+ There are a list of words that may be used to specify the next,
+-previous, or last occurence of something.  These words could be used
++previous, or last occurrence of something.  These words could be used
+ in the following phrases:
+ 
+    NEXT week
+@@ -236,17 +236,17 @@
+ 
+ The following words may be used:
+ 
+-Next occurence:
++Next occurrence:
+ 
+    siguiente
+ 
+ 
+-Previous occurence:
++Previous occurrence:
+ 
+    anterior
+ 
+ 
+-Last occurence:
++Last occurrence:
+ 
+    ultimo
+    último
+--- a/lib/Date/Manip/Lang/swedish.pod
++++ b/lib/Date/Manip/Lang/swedish.pod
+@@ -206,7 +206,7 @@
+ 
+ =item B<Each or every>
+ 
+-There are a list of words that specify every occurence of something.  These
++There are a list of words that specify every occurrence of something.  These
+ are used in the following phrases:
+ 
+    EACH Monday
+@@ -218,10 +218,10 @@
+    varje
+ 
+ 
+-=item B<Next/Previous/Last occurence>
++=item B<Next/Previous/Last occurrence>
+ 
+ There are a list of words that may be used to specify the next,
+-previous, or last occurence of something.  These words could be used
++previous, or last occurrence of something.  These words could be used
+ in the following phrases:
+ 
+    NEXT week
+@@ -233,19 +233,19 @@
+ 
+ The following words may be used:
+ 
+-Next occurence:
++Next occurrence:
+ 
+    nasta
+    nästa
+ 
+ 
+-Previous occurence:
++Previous occurrence:
+ 
+    forra
+    förra
+ 
+ 
+-Last occurence:
++Last occurrence:
+ 
+    forra
+    förra
+--- a/lib/Date/Manip/Lang/turkish.pod
++++ b/lib/Date/Manip/Lang/turkish.pod
+@@ -206,7 +206,7 @@
+ 
+ =item B<Each or every>
+ 
+-There are a list of words that specify every occurence of something.  These
++There are a list of words that specify every occurrence of something.  These
+ are used in the following phrases:
+ 
+    EACH Monday
+@@ -218,10 +218,10 @@
+    her
+ 
+ 
+-=item B<Next/Previous/Last occurence>
++=item B<Next/Previous/Last occurrence>
+ 
+ There are a list of words that may be used to specify the next,
+-previous, or last occurence of something.  These words could be used
++previous, or last occurrence of something.  These words could be used
+ in the following phrases:
+ 
+    NEXT week
+@@ -233,19 +233,19 @@
+ 
+ The following words may be used:
+ 
+-Next occurence:
++Next occurrence:
+ 
+    gelecek
+    sonraki
+ 
+ 
+-Previous occurence:
++Previous occurrence:
+ 
+    onceki
+    önceki
+ 
+ 
+-Last occurence:
++Last occurrence:
+ 
+    son
+    sonuncu
+--- a/lib/Date/Manip/Recur.pm
++++ b/lib/Date/Manip/Recur.pm
+@@ -1346,10 +1346,10 @@
+ 
+          #  *1:2:3:4       in Feb 0001 on the 3rd Thur of the month
+          #  *0:2:3:4       on the 3rd Thur of Feb in the curr year
+-         #  *1:2:3:0       the 3rd occurence of FirstDay in Feb 0001
+-         #  *0:2:3:0       the 3rd occurence of FirstDay in Feb of curr year
++         #  *1:2:3:0       the 3rd occurrence of FirstDay in Feb 0001
++         #  *0:2:3:0       the 3rd occurrence of FirstDay in Feb of curr year
+          #   1*2:3:4       every year in Feb on the 3rd Thur
+-         #   1*2:3:0       every year on the 3rd occurence of FirstDay in Feb
++         #   1*2:3:0       every year on the 3rd occurrence of FirstDay in Feb
+ 
+          ($err,@m)  = $self->_rtime_values('m',$mf);
+          return ()  if ($err);
+@@ -1400,9 +1400,9 @@
+ 
+       } else {
+ 
+-         #   0:2*3:0       every 2 months on the 3rd occurence of FirstDay
++         #   0:2*3:0       every 2 months on the 3rd occurrence of FirstDay
+          #   0:2*3:4       every 2 months on the 3rd Thur of the month
+-         #   1:2*3:0       every 1 year, 2 months on 3rd occurence of FirstDay
++         #   1:2*3:0       every 1 year, 2 months on 3rd occurrence of FirstDay
+          #   1:2*3:4       every 1 year, 2 months on the 3rd Thur of the month
+ 
+          if ($d_empty) {
+@@ -2173,7 +2173,7 @@
+    } elsif ($type eq 'dow_of_year') {
+       my($y,$dow) = @args;
+ 
+-      # Get the 1st occurence of $dow
++      # Get the 1st occurrence of $dow
+       my $d0   = 1;
+       my $dow0 = $dmb->day_of_week([$y,1,$d0]);
+       if ($dow > $dow0) {
+@@ -2201,7 +2201,7 @@
+    } elsif ($type eq 'dow_of_month') {
+       my($y,$m,$dow) = @args;
+ 
+-      # Get the 1st occurence of $dow in the month
++      # Get the 1st occurrence of $dow in the month
+       my $d0   = 1;
+       my $dow0 = $dmb->day_of_week([$y,$m,$d0]);
+       if ($dow > $dow0) {
+--- a/lib/Date/Manip/Recur.pod
++++ b/lib/Date/Manip/Recur.pod
+@@ -121,7 +121,7 @@
+ to by the base date being the 0th occurrence, the first one after that
+ as the 1st occurrence, etc.  Recurring events can also occur before
+ the base date with the last time the recurring event occurred before
+-the base date is the -1th occurence.
++the base date is the -1th occurrence.
+ 
+ So, if the frequency is
+ 
+@@ -372,7 +372,7 @@
+    0:0:0*x:x:x:x
+    0:0:1*x:x:x:x
+ 
+-and can be thought of as every possible occurence of the rtime.
++and can be thought of as every possible occurrence of the rtime.
+ 
+ NOTE: When applying a frequency to get a list of dates on which a
+ recurring event occurs, a delta is created from the frequency which is
+@@ -781,7 +781,7 @@
+                 current year
+ 
+ When the week is right of the asterisk, and the month is zero, the
+-recurrence refers to an occurence of the day-of-week during the
++recurrence refers to an occurrence of the day-of-week during the
+ year. The following are possible:
+ 
+   frequency     meaning
+@@ -866,27 +866,27 @@
+   frequency     meaning
+ 
+   1:2*3:0       every 1 year, 2 months on the 3rd
+-                occurence of FirstDay
++                occurrence of FirstDay
+ 
+-  0:2*3:0       every 2 months on the 3rd occurence
++  0:2*3:0       every 2 months on the 3rd occurrence
+                 of FirstDay
+ 
+-  1*2:3:0       every year on the 3rd occurence
++  1*2:3:0       every year on the 3rd occurrence
+                 of FirstDay in Feb
+ 
+   0*2:3:0       same as 1*2:3:0
+ 
+- *1:2:3:0       the 3rd occurence of FirstDay
++ *1:2:3:0       the 3rd occurrence of FirstDay
+                 Feb 0001
+ 
+- *0:2:3:0       the 3rd occurence of FirstDay
++ *0:2:3:0       the 3rd occurrence of FirstDay
+                 in Feb of the current year
+ 
+ NOTE: in the last group, a slightly more intuitive definition of these
+ would have been to say that the week field refers to the week of the
+ month, but given the ISO 8601 manner of defining when weeks start,
+ this definition would have virtually no practical application. So the
+-definition of the week field referring to the Nth occurence of
++definition of the week field referring to the Nth occurrence of
+ FirstDay in a month was used instead.
+ 
+ There are a few special cases here:
+@@ -894,7 +894,7 @@
+   frequency     meaning
+ 
+   0:0*3:0       same as 0:1*3:0   (every month on the 3rd
+-                occurence of the first day of week)
++                occurrence of the first day of week)
+ 
+   0*0:3:0       same as 1*0:3:0
+ 
